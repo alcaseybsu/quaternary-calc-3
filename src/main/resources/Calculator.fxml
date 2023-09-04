@@ -6,10 +6,6 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="425.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.UI_Calculator">
-      <Label fx:id="decimal_result" layoutX="45.0" layoutY="179.0" prefHeight="27.0" prefWidth="132.0" text="Result">
-      <font>
-         <Font size="20.0" />
-      </font></Label>
    <Button layoutX="46.0" layoutY="360.0" mnemonicParsing="false" text="Button">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
