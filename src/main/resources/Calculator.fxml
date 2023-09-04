@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="425.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.UI_Calculator">
+<AnchorPane prefHeight="425.0" prefWidth="461.0" style="-fx-background-color: #cccccc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.UI_Calculator">
    <Button layoutX="46.0" layoutY="360.0" mnemonicParsing="false" text="Button">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
@@ -62,9 +62,12 @@
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <TextField alignment="CENTER_RIGHT" layoutX="45.0" layoutY="84.0" prefHeight="82.0" prefWidth="372.0" promptText="EQUATION" style="-fx-border-color: #fff;" />
-   <Button layoutX="46.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" text="Toggle" />
-   <TextField layoutX="46.0" layoutY="26.0" prefHeight="70.0" prefWidth="372.0" promptText="RESULT" style="-fx-border-color: #fff;">
+   <TextField fx:id="equation_window" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="46.0" layoutY="96.0" prefHeight="70.0" prefWidth="372.0" promptText="EQUATION" style="-fx-border-color: #fff;" />
+   <Button layoutX="46.0" layoutY="200.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" text="TOGGLE">
+      <font>
+         <Font size="10.0" />
+      </font></Button>
+   <TextField fx:id="result_window" disable="true" editable="false" layoutX="46.0" layoutY="26.0" prefHeight="70.0" prefWidth="372.0" promptText="RESULT" style="-fx-border-color: #fff;">
       <opaqueInsets>
          <Insets />
       </opaqueInsets></TextField>
