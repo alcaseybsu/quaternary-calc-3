@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         Group root = new Group();
         Scene scene = new Scene(root);
         stage.setTitle("QuanCalc");
