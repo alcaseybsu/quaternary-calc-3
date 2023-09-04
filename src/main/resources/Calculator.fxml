@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="425.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.UI_Calculator">
-      <Label fx:id="decimal_result" layoutX="44.0" layoutY="38.0" prefHeight="27.0" prefWidth="117.0" text="(decinal Result)" />
-      <Label fx:id="quaternary_result" layoutX="44.0" layoutY="69.0" prefHeight="27.0" prefWidth="117.0" text="(quatenary result)" />
-      <Label fx:id="equation_window" layoutX="301.0" layoutY="87.0" prefHeight="27.0" prefWidth="95.0" text="(equation)" />
+<AnchorPane prefHeight="425.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.UI_Calculator">
+      <Label fx:id="decimal_result" layoutX="45.0" layoutY="179.0" prefHeight="27.0" prefWidth="132.0" text="Result">
+      <font>
+         <Font size="20.0" />
+      </font></Label>
    <Button layoutX="46.0" layoutY="360.0" mnemonicParsing="false" text="Button">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
@@ -64,4 +66,10 @@
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
+   <TextField alignment="CENTER_RIGHT" layoutX="45.0" layoutY="84.0" prefHeight="82.0" prefWidth="372.0" promptText="EQUATION" style="-fx-border-color: #fff;" />
+   <Button layoutX="46.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" text="Toggle" />
+   <TextField layoutX="46.0" layoutY="26.0" prefHeight="70.0" prefWidth="372.0" promptText="RESULT" style="-fx-border-color: #fff;">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets></TextField>
 </AnchorPane>
