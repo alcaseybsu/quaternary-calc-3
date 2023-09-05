@@ -1,23 +1,26 @@
 # quaternary-calc-3  
+Please use Gradle to build and run the program.
 
-### Team   
-Samuel Gross, Hannah Johnston, Austen Lowder, Caige Rogers, Leah Casey
 
-### About this Project
-    * (explanation of the project here)
+### Team:  
+* GUI = Hannah Johnston and Caige Rogers
+* Calculator = Samuel Gross
+* Converter + Tests = Austen Lowder
+* Code Clean-up, Meeting Notes + README = Leah Casey
+
+### About this Project:
+This application looks like a regular calculator, but only has buttons for the numbers 0, 1, 2, 3. The user can enter a quaternary (base-4) number, choose an operation button (addition, subtraction, division, or multiplication), enter a second quaternary number, and see the result of the operation. The user can also enter just one quaternary number and then choose a button to see its square or square root. Finally, the user can toggle between displaying a quaternary number or its decimal equivalent.
 
 ### Images
     *Screenshots go here
 
-### Software Used:
-    * Built in IntelliJ utilizing JavaScript, JavaFX, Gradle
-    * Dependencies, etc here
+### Technology:
+This app is built using Java, JavaFX, Gradle, and object-oriented design.
 
-### Task Distribution Heading Here:
-    * GUI = Hannah Johnston and Caige Rogers
-    * Calulator = Samuel Gross
-    * Converter + Tests = Austen Lowder
-    * Code Clean-up + README = Leah Casey    
+### Platform: 
+This is for desktop applications.
+
+------------------------------------------------------------------------------------------------------------------
 
 ### Meetings  
 
@@ -38,4 +41,11 @@ Samuel Gross, Hannah Johnston, Austen Lowder, Caige Rogers, Leah Casey
     - Calculator - Samuel  
     - Converter, Tests - Austen  
     - Clean-up + README - Leah  
-* Next meeting: Sunday on Slack  
+* Next meeting: Sunday on Slack 
+
+**9/3/23** on Slack
+* new build and repository set up due to conflicts between JavaFX dependencies and Kotlin
+
+**9/5/23** in-person, RB 353
+* functions(s) will update values per button pressed rather than '+'-ng the values together and then performing the operation
+* project should be mostly complete this evening
