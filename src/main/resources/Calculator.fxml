@@ -5,59 +5,59 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="425.0" prefWidth="461.0" style="-fx-background-color: #cccccc;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.UI_Calculator">
-   <Button layoutX="46.0" layoutY="360.0" mnemonicParsing="false" text=" Clear ">
+<AnchorPane prefHeight="425.0" prefWidth="461.0" style="-fx-background-color: #cccccc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.UI_Calculator">
+   <Button layoutX="46.0" layoutY="360.0" mnemonicParsing="false" onAction="#buttonClearClicked" text=" Clear ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font></Button>
-   <Button layoutX="142.0" layoutY="360.0" mnemonicParsing="false" text="    x²    ">
+   <Button layoutX="142.0" layoutY="360.0" mnemonicParsing="false" onAction="#buttonSquareClicked" text="    x²    ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font></Button>
-   <Button layoutX="235.0" layoutY="360.0" mnemonicParsing="false" text="      √     ">
+   <Button layoutX="235.0" layoutY="360.0" mnemonicParsing="false" onAction="#buttonSquareRootClicked" text="      √     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font></Button>
-   <Button layoutX="333.0" layoutY="360.0" mnemonicParsing="false" text=" Enter ">
+   <Button layoutX="333.0" layoutY="360.0" mnemonicParsing="false" onAction="#buttonEnterClicked" text=" Enter ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font></Button>
-   <Button layoutX="46.0" layoutY="318.0" mnemonicParsing="false" text="     +     ">
+   <Button layoutX="46.0" layoutY="318.0" mnemonicParsing="false" onAction="#buttonPlusClicked" text="     +     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <Button layoutX="142.0" layoutY="318.0" mnemonicParsing="false" text="     -     ">
+   <Button layoutX="142.0" layoutY="318.0" mnemonicParsing="false" onAction="#buttonMinusClicked" text="     -     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <Button layoutX="235.0" layoutY="318.0" mnemonicParsing="false" text="      x     ">
+   <Button layoutX="235.0" layoutY="318.0" mnemonicParsing="false" onAction="#buttonMultiplyClicked" text="      x     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <Button layoutX="333.0" layoutY="318.0" mnemonicParsing="false" text="    %    ">
+   <Button layoutX="333.0" layoutY="318.0" mnemonicParsing="false" onAction="#buttonDivideClicked" text="    %    ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <Button layoutX="46.0" layoutY="272.0" mnemonicParsing="false" text="     0     ">
+   <Button layoutX="46.0" layoutY="272.0" mnemonicParsing="false" onAction="#button0Clicked" text="     0     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <Button layoutX="142.0" layoutY="272.0" mnemonicParsing="false" text="     1     ">
+   <Button layoutX="142.0" layoutY="272.0" mnemonicParsing="false" onAction="#button1Clicked" text="     1     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <Button layoutX="235.0" layoutY="272.0" mnemonicParsing="false" text="      2     ">
+   <Button layoutX="235.0" layoutY="272.0" mnemonicParsing="false" onAction="#button2Clicked" text="      2     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <Button layoutX="333.0" layoutY="272.0" mnemonicParsing="false" text="     3     ">
+   <Button layoutX="333.0" layoutY="272.0" mnemonicParsing="false" onAction="#button3Clicked" text="     3     ">
       <font>
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
