@@ -62,7 +62,10 @@
          <Font name="Times New Roman Bold" size="19.0" />
       </font>
    </Button>
-   <TextField fx:id="equation_window" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="46.0" layoutY="96.0" prefHeight="70.0" prefWidth="372.0" promptText="EQUATION" style="-fx-border-color: #fff;" />
+   <TextField fx:id="equation_window" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="46.0" layoutY="96.0" prefHeight="70.0" prefWidth="372.0" promptText="EQUATION" style="-fx-border-color: #fff;">
+      <font>
+         <Font size="16.0" />
+      </font></TextField>
    <Button layoutX="46.0" layoutY="200.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" text="TOGGLE">
       <font>
          <Font size="10.0" />
@@ -70,5 +73,8 @@
    <TextField fx:id="result_window" disable="true" editable="false" layoutX="46.0" layoutY="26.0" prefHeight="70.0" prefWidth="372.0" promptText="RESULT" style="-fx-border-color: #fff;">
       <opaqueInsets>
          <Insets />
-      </opaqueInsets></TextField>
+      </opaqueInsets>
+      <font>
+         <Font size="16.0" />
+      </font></TextField>
 </AnchorPane>
