@@ -2,30 +2,42 @@ package userInterface;
 
 import javafx.scene.control.TextField;
 
+
+import java.util.Arrays;
+
+
 public class UI_Calculator {
     public TextField equation_window;
     public TextField result_window;
     public String equation ="";
+    public String result= "";
+
+    public String operation = null;
 
     public void buttonClearClicked() {
         equation = "";
         equation_window.setText(equation);
+        result_window.setText("");
+        operation = "";
     }
     public void buttonSquareClicked() {
         if (!operationCheck(equation)) {
             setEquation_window("²");
+            operation = "square";
         }
     }
 
     public void buttonSquareRootClicked() {
         if (!operationCheck(equation)) {
             setEquation_window("√");
+            operation = "root";
         }
 
     }
     public void buttonPlusClicked() {
         if (!operationCheck(equation)) {
             setEquation_window("+");
+            operation = "+";
         }
 
     }
@@ -33,18 +45,21 @@ public class UI_Calculator {
     public void buttonMinusClicked() {
         if (!operationCheck(equation)) {
             setEquation_window("-");
+            operation = "-";
         }
     }
 
     public void buttonMultiplyClicked() {
         if (!operationCheck(equation)) {
-            setEquation_window("*");
+            setEquation_window("x");
+            operation = "x";
         }
     }
 
     public void buttonDivideClicked() {
         if (!operationCheck(equation)) {
             setEquation_window("/");
+            operation = "/";
         }
     }
 
@@ -71,10 +86,9 @@ public class UI_Calculator {
 
 
     public void buttonEnterClicked() {
-        result_window.setText(operationCheck(equation).toString());
-
+        String[] numbers = splitString(equation);
+        result_window.setText(Arrays.toString(numbers));
     }
-
 
     private void setEquation_window(String str){
         equation += str;
@@ -90,5 +104,25 @@ public class UI_Calculator {
             }
         }
         return count >= 1;
+    }
+
+    private String[] splitString(String str){
+        String[] numbers;
+        if (str.contains("+")){
+            //this needs fixed, it is a dangling quantifier
+            numbers = "+".split(str);
+
+        }else if (str.contains("-")){
+            numbers = str.split("-");
+        }else if (str.contains("x")){
+            numbers = str.split("x");
+        }else if (str.contains("/")){
+            numbers = str.split("/");
+        }else if (str.contains("√")){
+            numbers = str.split("√");
+        }else
+            numbers = str.split("²");
+
+        return numbers;
     }
 }

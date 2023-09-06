@@ -10,7 +10,7 @@ public class Calculator {
 
     public static String calculate(int firstNum, String Operator, int secondNum){
 
-        if (Objects.equals(Operator, "*")){
+        if (Objects.equals(Operator, "x")){
             return multiply(firstNum, secondNum);
         }
         else if (Objects.equals(Operator, "/")){
