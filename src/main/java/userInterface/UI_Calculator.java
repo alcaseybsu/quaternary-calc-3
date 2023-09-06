@@ -11,64 +11,84 @@ public class UI_Calculator {
         equation = "";
         equation_window.setText(equation);
     }
-
     public void buttonSquareClicked() {
-        equation += "²";
-        equation_window.setText(equation);
+        if (!operationCheck(equation)) {
+            setEquation_window("²");
+        }
     }
 
     public void buttonSquareRootClicked() {
-        equation += "√" ;
-        equation_window.setText(equation);
+        if (!operationCheck(equation)) {
+            setEquation_window("√");
+        }
 
     }
-    public void buttonEnterClicked() {
-
-    }
-
     public void buttonPlusClicked() {
-        equation += "+";
-        equation_window.setText(equation);
+        if (!operationCheck(equation)) {
+            setEquation_window("+");
+        }
 
     }
 
     public void buttonMinusClicked() {
-        equation += "-";
-        equation_window.setText(equation);
+        if (!operationCheck(equation)) {
+            setEquation_window("-");
+        }
     }
 
     public void buttonMultiplyClicked() {
-        equation += "*";
-        equation_window.setText(equation);
+        if (!operationCheck(equation)) {
+            setEquation_window("*");
+        }
     }
 
     public void buttonDivideClicked() {
-        equation += "/";
-        equation_window.setText(equation);
+        if (!operationCheck(equation)) {
+            setEquation_window("/");
+        }
     }
 
     public void button0Clicked() {
-        equation += 0;
-        equation_window.setText(equation);
-
+        setEquation_window("0");
     }
     public void button1Clicked() {
-        equation += 1;
-        equation_window.setText(equation);
+        setEquation_window("1");
+
     }
 
     public void button2Clicked() {
-        equation += 2;
-        equation_window.setText(equation);
+        setEquation_window("2");
+
     }
 
     public void button3Clicked() {
-        equation += 3;
-        equation_window.setText(equation);
+        setEquation_window("3");
     }
 
     public void toggleButtonPressed() {
 
     }
-}
 
+
+    public void buttonEnterClicked() {
+        result_window.setText(operationCheck(equation).toString());
+
+    }
+
+
+    private void setEquation_window(String str){
+        equation += str;
+        equation_window.setText(equation);
+    }
+
+    private Boolean operationCheck(String str){
+        int count = 0;
+        char[] strArray = str.toCharArray();
+        for (char c : strArray){
+            if (c == '+' ||c == '-' ||c == '*'||c == '/' ||c == '√' ||c == '²'){
+                count+=1;
+            }
+        }
+        return count >= 1;
+    }
+}
