@@ -2,10 +2,13 @@ package quaternary3;
 
 import java.util.Objects;
 
+import static quaternary3.QuaternaryConverter.convertToBase4;
+import static quaternary3.QuaternaryConverter.convertToDecimal;
+
 public class Calculator {
     public Calculator(){}
 
-    public int calculate(int firstNum, String Operator, int secondNum){
+    public static String calculate(int firstNum, String Operator, int secondNum){
 
         if (Objects.equals(Operator, "*")){
             return multiply(firstNum, secondNum);
@@ -22,37 +25,53 @@ public class Calculator {
     }
 
 
-    public int calculate(int firstNum, String Operator){
+    public static String calculate(int firstNum, String Operator){
         if (Objects.equals(Operator, "root")){
-            return root(firstNum);
-        }
-        else {
             return squareroot(firstNum);
         }
+        else {
+            return square(firstNum);
+        }
     }
 
-    private int squareroot(int firstNum) {
-        return 0;
+    private static String squareroot(int firstNum) {
+        int convertedNum = convertToDecimal(firstNum);
+        convertedNum = (int) Math.sqrt(convertedNum);
+        return convertToBase4(convertedNum);
     }
 
-    private int root(int firstNum) {
-        return 0;
+    private static String square(int firstNum) {
+        int convertedNum = convertToDecimal(firstNum);
+        convertedNum = convertedNum + convertedNum;
+        return convertToBase4(convertedNum);
     }
 
-    private int subtract(int firstNum, int secondNum) {
-        return 0;
+    private static String subtract(int firstNum, int secondNum) {
+        int convertedNumOne = convertToDecimal(firstNum);
+        int convertedNumTwo = convertToDecimal(secondNum);
+        int result = convertedNumOne - convertedNumTwo;
+        return convertToBase4(result);
     }
 
-    private int add(int firstNum, int secondNum) {
-        return 0;
+    private static String add(int firstNum, int secondNum) {
+        int convertedNumOne = convertToDecimal(firstNum);
+        int convertedNumTwo = convertToDecimal(secondNum);
+        int result = convertedNumOne + convertedNumTwo;
+        return convertToBase4(result);
     }
 
-    private int divide(int firstNum, int secondNum) {
-        return 0;
+    private static String divide(int firstNum, int secondNum) {
+        int convertedNumOne = convertToDecimal(firstNum);
+        int convertedNumTwo = convertToDecimal(secondNum);
+        int result = convertedNumOne / convertedNumTwo;
+        return convertToBase4(result);
     }
 
-    private int multiply(int firstNum, int secondNum) {
-        return 0;
+    private static String multiply(int firstNum, int secondNum) {
+        int convertedNumOne = convertToDecimal(firstNum);
+        int convertedNumTwo = convertToDecimal(secondNum);
+        int result = convertedNumOne * convertedNumTwo;
+        return convertToBase4(result);
     }
 
 
