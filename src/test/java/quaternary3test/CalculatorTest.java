@@ -1,5 +1,7 @@
 package quaternary3test;
 import org.junit.jupiter.api.Test;
+import quaternary3.Calculator;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
@@ -11,7 +13,7 @@ class CalculatorTest {
     @Test
     void testCalculate() {
     }
-    
+
     @Test
     public void testAddition() {
         String result = Calculator.calculate(10, "+", 5);
@@ -47,3 +49,4 @@ class CalculatorTest {
         String result = Calculator.calculate(16, "root");
         assertEquals("2", result);
     }
+}
