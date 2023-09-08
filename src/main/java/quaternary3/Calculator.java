@@ -37,13 +37,13 @@ public class Calculator {
     private static String squareroot(int firstNum) {
         int convertedNum = convertToDecimal(firstNum);
         convertedNum = (int) Math.sqrt(convertedNum);
-        return convertToBase4(convertedNum);
+        return String.valueOf(convertedNum);
     }
 
     private static String square(int firstNum) {
         int convertedNum = convertToDecimal(firstNum);
-        convertedNum = convertedNum + convertedNum;
-        return convertToBase4(convertedNum);
+        convertedNum = convertedNum * convertedNum;
+        return String.valueOf(convertedNum);
     }
 
     private static String subtract(int firstNum, int secondNum) {
