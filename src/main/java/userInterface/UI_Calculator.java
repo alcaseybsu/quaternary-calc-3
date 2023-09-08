@@ -5,7 +5,6 @@ import quaternary3.Calculator;
 import quaternary3.QuaternaryConverter;
 
 
-import java.util.Arrays;
 
 
 public class UI_Calculator extends QuaternaryConverter {
@@ -94,6 +93,7 @@ public class UI_Calculator extends QuaternaryConverter {
             temp = 1;
         }else {
             temp = 0;
+            answer = convertToDecimal(answer);
         }
         result_window.setText(String.valueOf(answer));
     }
