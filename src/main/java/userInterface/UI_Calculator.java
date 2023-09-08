@@ -1,17 +1,18 @@
 package userInterface;
 
 import javafx.scene.control.TextField;
+import quaternary3.QuaternaryConverter;
 
 
 import java.util.Arrays;
 
 
-public class UI_Calculator {
+public class UI_Calculator extends QuaternaryConverter {
     public TextField equation_window;
     public TextField result_window;
     public String equation ="";
     public String result= "";
-
+    public Integer temp = 0;
     public String operation = null;
 
     public void buttonClearClicked() {
@@ -81,7 +82,15 @@ public class UI_Calculator {
     }
 
     public void toggleButtonPressed() {
-
+        int answer = 0;
+        if(temp == 0){
+            answer = convertToDecimal(010);
+            temp = 1;
+        } else {
+            answer = Integer.parseInt(convertToBase4(8));
+            temp = 0;
+        }
+        result_window.setText(String.valueOf(answer));
     }
 
 
@@ -99,7 +108,7 @@ public class UI_Calculator {
         int count = 0;
         char[] strArray = str.toCharArray();
         for (char c : strArray){
-            if (c == '+' ||c == '-' ||c == '*'||c == '/' ||c == '√' ||c == '²'){
+            if (c == '+' ||c == '-' ||c == '*'||c == '/'){
                 count+=1;
             }
         }
@@ -108,9 +117,10 @@ public class UI_Calculator {
 
     private String[] splitString(String str){
         String[] numbers;
+        String s = "+";
         if (str.contains("+")){
             //this needs fixed, it is a dangling quantifier
-            numbers = "+".split(str);
+            numbers = "+".split(s);
 
         }else if (str.contains("-")){
             numbers = str.split("-");
