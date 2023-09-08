@@ -82,7 +82,7 @@ public class UI_Calculator extends QuaternaryConverter {
     }
 
     public void toggleButtonPressed() {
-        int answer = 0;
+        int answer;
         if(temp == 0){
             answer = convertToDecimal(010);
             temp = 1;
@@ -108,7 +108,7 @@ public class UI_Calculator extends QuaternaryConverter {
         int count = 0;
         char[] strArray = str.toCharArray();
         for (char c : strArray){
-            if (c == '+' ||c == '-' ||c == '*'||c == '/'){
+            if (c == '+' || c == '-' || c == '*'|| c == '/'){
                 count+=1;
             }
         }
