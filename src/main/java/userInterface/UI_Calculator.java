@@ -1,6 +1,7 @@
 package userInterface;
 
 import javafx.scene.control.TextField;
+import quaternary3.Calculator;
 import quaternary3.QuaternaryConverter;
 
 
@@ -96,7 +97,8 @@ public class UI_Calculator extends QuaternaryConverter {
 
     public void buttonEnterClicked() {
         String[] numbers = splitString(equation);
-        result_window.setText(Arrays.toString(numbers));
+        result = Calculator.calculate(Integer.parseInt(numbers[0]),operation,Integer.parseInt(numbers[1]));
+        result_window.setText(result);
     }
 
     private void setEquation_window(String str){
@@ -118,9 +120,7 @@ public class UI_Calculator extends QuaternaryConverter {
     private String[] splitString(String str){
         String[] numbers;
         if (str.contains("+")){
-            //this needs fixed, it is a dangling quantifier
             numbers = str.split("\\+");
-
         }else if (str.contains("-")){
             numbers = str.split("-");
         }else if (str.contains("x")){
