@@ -1,5 +1,6 @@
 package userInterface;
 
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import quaternary3.Calculator;
 import quaternary3.QuaternaryConverter;
@@ -11,6 +12,7 @@ import java.util.Arrays;
 public class UI_Calculator extends QuaternaryConverter {
     public TextField equation_window;
     public TextField result_window;
+    public Label mode_label;
     public String equation ="";
     public String result= "";
     public Integer temp = 0;
@@ -18,11 +20,14 @@ public class UI_Calculator extends QuaternaryConverter {
     public Integer tempRoot = 0;
     public String operation = null;
 
+    private boolean isDecimalMode = false;
+
     public void buttonClearClicked() {
         equation = "";
         equation_window.setText(equation);
         result_window.setText("");
         operation = "";
+        updateModeLabel();
     }
     public void buttonSquareClicked() {
         if (!operationCheck(equation)) {
@@ -88,6 +93,8 @@ public class UI_Calculator extends QuaternaryConverter {
     }
 
     public void toggleButtonPressed() {
+        isDecimalMode = !isDecimalMode;
+        updateModeLabel();
         int answer = Integer.parseInt(result);
         if(temp == 0){
             answer = convertToDecimal(answer);
@@ -110,6 +117,14 @@ public class UI_Calculator extends QuaternaryConverter {
             String[] numbers = splitString(equation);
             result = Calculator.calculate(Integer.parseInt(numbers[0]), operation, Integer.parseInt(numbers[1]));
             result_window.setText(result);
+        }
+    }
+
+    private void updateModeLabel() {
+        if (isDecimalMode) {
+            mode_label.setText("Base-10");
+        } else {
+            mode_label.setText("Base-4");
         }
     }
 

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test" isTestSource="false" generated="true" />
     </content>
+    <orderEntry type="jdk" jdkName="18" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.9.2" level="project" />
+    <orderEntry type="module" module-name="quaternarycalculatorgroup3.main" scope="TEST" />
   </component>
 </module>

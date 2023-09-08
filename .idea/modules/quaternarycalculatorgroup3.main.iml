@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />
     </content>
+    <orderEntry type="jdk" jdkName="18" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:win:16" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-fxml:win:16" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:win:16" level="project" />
   </component>
 </module>

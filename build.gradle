@@ -4,7 +4,7 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
-group 'org.example'
+group 'quaternary3'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -17,7 +17,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }
 javafx {
-    version = "16"
+    version = "17"
     modules = [ 'javafx.controls','javafx.fxml' ]
 }
 test {

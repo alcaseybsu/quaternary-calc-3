@@ -77,4 +77,9 @@
       <font>
          <Font size="18.0" />
       </font></TextField>
+   <Label fx:id="mode_label" text="Base-4" layoutX="46.0" layoutY="110.0" style="-fx-font-weight: bold; -fx-text-fill: #008000; -fx-font-size: 12px;">>
+      <font>
+         <Font size="14" />
+      </font>
+   </Label>
 </AnchorPane>
