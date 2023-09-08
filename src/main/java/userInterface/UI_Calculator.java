@@ -89,11 +89,10 @@ public class UI_Calculator extends QuaternaryConverter {
     public void toggleButtonPressed() {
         int answer = Integer.parseInt(result);
         if(temp == 0){
-            answer = Integer.parseInt(convertToBase4(answer));
+            answer = convertToDecimal(answer);
             temp = 1;
         }else {
             temp = 0;
-            answer = convertToDecimal(answer);
         }
         result_window.setText(String.valueOf(answer));
     }
