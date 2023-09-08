@@ -110,7 +110,7 @@ public class UI_Calculator extends QuaternaryConverter {
         int count = 0;
         char[] strArray = str.toCharArray();
         for (char c : strArray){
-            if (c == '+' || c == '-' || c == '*'|| c == '/'){
+            if (c == '+' || c == '-' || c == '*'|| c == '/'|| c == '√'|| c == '²'){
                 count+=1;
             }
         }
