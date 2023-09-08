@@ -5,7 +5,6 @@ public class QuaternaryConverter {
 
     public static int convertToDecimal(int number) {
         String numberString = "" + number;
-        System.out.println(numberString);
         int decimalNumber = 0;
         int power = 0;
             for (int i = numberString.length() - 1; i >= 0; i--) {
@@ -14,7 +13,6 @@ public class QuaternaryConverter {
                 decimalNumber += digit * Math.pow(4, power);
                 power++;
             }
-        System.out.println(numberString);
 
 
         return decimalNumber;
