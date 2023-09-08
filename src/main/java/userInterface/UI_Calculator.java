@@ -38,7 +38,7 @@ public class UI_Calculator extends QuaternaryConverter {
     public void buttonPlusClicked() {
         if (!operationCheck(equation)) {
             setEquation_window("+");
-            operation = "+";
+            operation = ",";
         }
 
     }
@@ -117,10 +117,9 @@ public class UI_Calculator extends QuaternaryConverter {
 
     private String[] splitString(String str){
         String[] numbers;
-        String s = "+";
         if (str.contains("+")){
             //this needs fixed, it is a dangling quantifier
-            numbers = "+".split(s);
+            numbers = str.split("\\+");
 
         }else if (str.contains("-")){
             numbers = str.split("-");
