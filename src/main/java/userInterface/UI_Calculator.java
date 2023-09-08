@@ -44,7 +44,7 @@ public class UI_Calculator extends QuaternaryConverter {
     public void buttonPlusClicked() {
         if (!operationCheck(equation)) {
             setEquation_window("+");
-            operation = ",";
+            operation = "+";
         }
 
     }
