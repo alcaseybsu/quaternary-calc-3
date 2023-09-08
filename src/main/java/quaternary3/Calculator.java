@@ -42,7 +42,7 @@ public class Calculator {
 
     private static String square(int firstNum) {
         int convertedNum = convertToDecimal(firstNum);
-        convertedNum = convertedNum + convertedNum;
+        convertedNum = convertedNum * convertedNum;
         return convertToBase4(convertedNum);
     }
 

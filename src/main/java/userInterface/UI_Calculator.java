@@ -14,6 +14,8 @@ public class UI_Calculator extends QuaternaryConverter {
     public String equation ="";
     public String result= "";
     public Integer temp = 0;
+    public Integer tempSquare = 0;
+    public Integer tempRoot = 0;
     public String operation = null;
 
     public void buttonClearClicked() {
@@ -24,14 +26,17 @@ public class UI_Calculator extends QuaternaryConverter {
     }
     public void buttonSquareClicked() {
         if (!operationCheck(equation)) {
-            setEquation_window("²");
+            tempSquare = Integer.parseInt(equation);
+            setEquation_window("\u00B2");
             operation = "square";
+
         }
     }
 
     public void buttonSquareRootClicked() {
         if (!operationCheck(equation)) {
-            setEquation_window("√");
+            tempRoot = Integer.valueOf(equation);
+            setEquation_window("\u221A");
             operation = "root";
         }
 
@@ -96,9 +101,17 @@ public class UI_Calculator extends QuaternaryConverter {
 
 
     public void buttonEnterClicked() {
-        String[] numbers = splitString(equation);
-        result = Calculator.calculate(Integer.parseInt(numbers[0]),operation,Integer.parseInt(numbers[1]));
-        result_window.setText(result);
+        if(operation == "root"){
+            result = Calculator.calculate(tempRoot, "root");
+            result_window.setText(result);
+        }else if(operation ==  "square"){
+            result = Calculator.calculate(tempSquare, "square");
+            result_window.setText(result);
+        }else {
+            String[] numbers = splitString(equation);
+            result = Calculator.calculate(Integer.parseInt(numbers[0]), operation, Integer.parseInt(numbers[1]));
+            result_window.setText(result);
+        }
     }
 
     private void setEquation_window(String str){
