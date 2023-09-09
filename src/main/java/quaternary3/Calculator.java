@@ -34,13 +34,13 @@ public class Calculator {
         }
     }
 
-    private static String squareroot(int firstNum) {
+    public static String squareroot(int firstNum) {
         int convertedNum = convertToDecimal(firstNum);
         convertedNum = (int) Math.sqrt(convertedNum);
         return convertToBase4(convertedNum);
     }
 
-    private static String square(int firstNum) {
+    public static String square(int firstNum) {
         int convertedNum = convertToDecimal(firstNum);
         convertedNum = convertedNum * convertedNum;
         return convertToBase4(convertedNum);
