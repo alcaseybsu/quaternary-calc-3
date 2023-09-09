@@ -106,9 +106,9 @@ ________________________________________________________________________________
 
 **9/5/23** in-person, RB 353
 * functions(s) will update values per button pressed rather than '+'-ng the values together and then performing the operation
-* project should be mostly complete this evening
+* project should be mostly complete this evening  
 
-**9/8/23 via Slack  
+**9/8/23 via Slack**
 * Discussed fixed several errors, such digits showing up in display regardless of operations entered  
 * A few team members experienced issues using Gradle, JavaFX, and/or JUnit; these were solved  
 * Operation functions updated do address mathematical and running errors  
