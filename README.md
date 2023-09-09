@@ -22,7 +22,7 @@ ________________________________________________________________________________
 * Code Clean-up, Meeting Notes + README = Leah Casey
 
 ### About this Project:
-This application looks like a regular calculator, but only has buttons for the numbers 0, 1, 2, 3. The user can enter a quaternary (base-4) number, choose an operation button (addition, subtraction, division, or multiplication), enter a second quaternary number, and see the result of the operation. The user can also enter just one quaternary number and then choose a button to see its square or square root. Finally, the user can toggle between displaying a quaternary number or its decimal equivalent.
+This application looks like a regular calculator, but only has buttons for the numbers 0, 1, 2, 3. The user can enter a quaternary (base-4) number, choose an operation button (addition, subtraction, division, or multiplication), enter a second quaternary number, and see the result of the operation. The user can also enter just one quaternary number and then choose a button to see its square or square root. Finally, the user can toggle between displaying the base-4 result or its decimal equivalent.
 
 ### Technology:
 This app is built using Java, JavaFX, Gradle, and object-oriented design.  
