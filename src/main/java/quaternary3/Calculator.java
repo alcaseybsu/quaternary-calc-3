@@ -61,10 +61,14 @@ public class Calculator {
     }
 
     private static String divide(int firstNum, int secondNum) {
-        int convertedNumOne = convertToDecimal(firstNum);
-        int convertedNumTwo = convertToDecimal(secondNum);
-        int result = convertedNumOne / convertedNumTwo;
-        return convertToBase4(result);
+        if (secondNum == 0){
+            return "Cannot divide by zero";
+        }else {
+            int convertedNumOne = convertToDecimal(firstNum);
+            int convertedNumTwo = convertToDecimal(secondNum);
+            int result = convertedNumOne / convertedNumTwo;
+            return convertToBase4(result);
+        }
     }
 
     private static String multiply(int firstNum, int secondNum) {
