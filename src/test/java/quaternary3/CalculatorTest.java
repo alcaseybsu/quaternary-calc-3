@@ -23,7 +23,7 @@ public class CalculatorTest {
         assertEquals( 21210, Calculator.calculate( 243,  "x",  24 ));
         assertEquals( 2213130, Calculator.calculate( 1030,  "x",  2031 ));
     }
-    //TODO
+
     @Test
     public void testDivideBase4() {
         assertEquals( 1113 , Calculator.calculate( 3332,  "/",  2 ));
