@@ -1,13 +1,9 @@
-package userInterface;
+package user_interface;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import quaternary3.Calculator;
 import quaternary3.QuaternaryConverter;
-
-
-import java.util.Arrays;
-
 
 public class UI_Calculator extends QuaternaryConverter {
     public TextField equation_window;
