@@ -97,7 +97,7 @@ ________________________________________________________________________________
 * Allocation of tasks:  
     - GUI - Hannah and Caige  
     - Calculator - Samuel  
-    - Converter, Tests - Austen  
+    - Converter + Tests - Austen  
     - Clean-up + README - Leah  
 * Next meeting: Sunday on Slack 
 
@@ -109,8 +109,8 @@ ________________________________________________________________________________
 * project should be mostly complete this evening  
 
 **9/8/23** via Slack
-* Discussed fixed several errors, such digits showing up in display regardless of operations entered  
+* Discussed and fixed several errors, such as digits showing up in display regardless of operations entered  
 * A few team members experienced issues using Gradle, JavaFX, and/or JUnit; these were solved  
-* Operation functions updated do address mathematical and running errors  
+* Operation functions updated to address mathematical and running errors  
 * Label added to display which mode the calculator is operating in  
 * Screen shots added, README completed  
